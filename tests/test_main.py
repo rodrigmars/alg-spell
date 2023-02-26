@@ -22,3 +22,12 @@ def test_creating_root_folder(setup):
     system(f"mkdir {path_project}/{name_project}")
 
     assert path.exists(f"{path_project}/{name_project}")
+
+def test_creating_root_sub_folder(setup):
+
+    path_project, name_project = setup
+
+    system(f"mkdir {path_project}/{name_project}/{name_project}")
+
+    assert path.exists(f"{path_project}/{name_project}/{name_project}")
+
