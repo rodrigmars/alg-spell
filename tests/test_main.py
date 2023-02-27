@@ -6,6 +6,7 @@ from settings import NAME_PROJECT, PATH_PROJECT
 
 @fixture
 def setup() -> tuple[str, str]:
+   
     
     root_project = f"{PATH_PROJECT}/{NAME_PROJECT}"
 
