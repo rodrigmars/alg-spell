@@ -4,9 +4,8 @@ from os import system, path
 
 from settings import NAME_PROJECT, PATH_PROJECT
 
-
 @fixture
-def setup():
+def setup() -> tuple[str, str]:
     
     root_project = f"{PATH_PROJECT}/{NAME_PROJECT}"
 
@@ -15,18 +14,16 @@ def setup():
 
     return PATH_PROJECT, NAME_PROJECT
 
-
-def test_creating_root_folder(setup):
+def test_creating_root_folder(setup: tuple[str, str]) -> None:
 
     path_project, name_project = setup
 
     assert 0 == system(f"mkdir {path.join(path_project, name_project)}")
 
-
-def test_creating_root_sub_folder(setup):
+def test_creating_root_sub_folder(setup: tuple[str, str]) -> None:
 
     path_project, name_project = setup
 
-    root = path.join(path_project, name_project)
+    root: str = path.join(path_project, name_project)
 
     assert 0 == system(f"mkdir {root} && cd {root} && mkdir {name_project}")
