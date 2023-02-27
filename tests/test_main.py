@@ -1,30 +1,30 @@
 from pytest import fixture
 
-from os import system, path
+from os import system
 
 from settings import NAME_PROJECT, PATH_PROJECT
 
+
 @fixture
 def setup() -> tuple[str, str]:
-   
-    
-    root_project = f"{PATH_PROJECT}/{NAME_PROJECT}"
 
-    system(f"rm -r {root_project}") \
-        if 0 == system(f"[ -d {root_project} ];") else None
+    root = f"{PATH_PROJECT}/{NAME_PROJECT}"
 
-    return PATH_PROJECT, NAME_PROJECT
+    system(f"rm -r {root}") \
+        if 0 == system(f"[ -d {root} ];") else None
 
-def test_creating_root_folder(setup: tuple[str, str]) -> None:
+    return root, NAME_PROJECT
 
-    path_project, name_project = setup
 
-    assert 0 == system(f"mkdir {path.join(path_project, name_project)}")
+def test_creating_repo_folder(setup: tuple[str, str]) -> None:
 
-def test_creating_root_sub_folder(setup: tuple[str, str]) -> None:
+    root, _ = setup
 
-    path_project, name_project = setup
+    assert 0 == system(f"mkdir {root}")
 
-    root: str = path.join(path_project, name_project)
 
-    assert 0 == system(f"mkdir {root} && cd {root} && mkdir {name_project}")
+def test_creating_application_folder(setup: tuple[str, str]) -> None:
+
+    root, name_project = setup
+
+    assert 0 == system(f'mkdir {root} && mkdir {root}/{name_project}')
