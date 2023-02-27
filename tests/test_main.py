@@ -1,11 +1,10 @@
-from pytest import fixture
+from pytest import fixture, mark
 
 from os import system
 
 from settings import NAME_PROJECT, PATH_PROJECT
 
-
-@fixture
+@fixture()
 def setup() -> tuple[str, str]:
 
     root = f"{PATH_PROJECT}/{NAME_PROJECT}"
@@ -15,16 +14,16 @@ def setup() -> tuple[str, str]:
 
     return root, NAME_PROJECT
 
-
+# @mark.skip
 def test_creating_repo_folder(setup: tuple[str, str]) -> None:
 
     root, _ = setup
 
     assert 0 == system(f"mkdir {root}")
 
-
+# @mark.skip
 def test_creating_application_folder(setup: tuple[str, str]) -> None:
 
     root, name_project = setup
 
-    assert 0 == system(f'mkdir {root} && mkdir {root}/{name_project}')
+    assert 0 == system(f'mkdir {root} && mkdir {root}/{name_project} ')
