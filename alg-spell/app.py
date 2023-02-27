@@ -7,4 +7,11 @@ def main():
 
 if __name__ == "__main__":
 
-    main()
+    try:
+
+        main()
+        exit(0)
+
+    except Exception:
+
+        exit(1)

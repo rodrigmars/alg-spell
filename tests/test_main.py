@@ -7,10 +7,11 @@ from settings import NAME_PROJECT, PATH_PROJECT
 
 @fixture
 def setup():
+    
+    root_project = f"{PATH_PROJECT}/{NAME_PROJECT}"
 
-    if path.exists(path.join(PATH_PROJECT, NAME_PROJECT)):
-
-        system(f"rm -r {PATH_PROJECT}/{NAME_PROJECT}")
+    system(f"rm -r {root_project}") \
+        if 0 == system(f"[ -d {root_project} ];") else None
 
     return PATH_PROJECT, NAME_PROJECT
 
@@ -19,15 +20,13 @@ def test_creating_root_folder(setup):
 
     path_project, name_project = setup
 
-    system(f"mkdir {path_project}/{name_project}")
+    assert 0 == system(f"mkdir {path.join(path_project, name_project)}")
 
-    assert path.exists(f"{path_project}/{name_project}")
 
 def test_creating_root_sub_folder(setup):
 
     path_project, name_project = setup
 
-    system(f"mkdir {path_project}/{name_project}/{name_project}")
+    root = path.join(path_project, name_project)
 
-    assert path.exists(f"{path_project}/{name_project}/{name_project}")
-
+    assert 0 == system(f"mkdir {root} && cd {root} && mkdir {name_project}")
