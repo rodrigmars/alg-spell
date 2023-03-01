@@ -5,7 +5,7 @@ from typing import Iterator
 from unicodedata import normalize
 
 
-def get_only_alphabets(text: str) -> str:
+def only_alphabetic_characters(text: str) -> str:
     return sub("[^A-Za-z\\s]", "", text)
 
 
@@ -15,7 +15,7 @@ def normalize_text(text: str) -> str:
         .decode('UTF-8')
 
 
-def letter_to_index(letter: str) -> Iterator[int]:
+def letter_to_number(letter: str) -> Iterator[int]:
     _alphabet = 'abcdefghijklmnopqrstuvwxyz'
     return (i for i, _letter in enumerate(_alphabet, 1) if _letter == letter)
 
@@ -28,7 +28,7 @@ def setup() -> list[str]:
             humano tentando desesperadamente explicar uma existência \
                 sem significado ou propósito."
 
-    return get_only_alphabets(normalize_text(phrase_matrix.lower())).split()
+    return only_alphabetic_characters(normalize_text(phrase_matrix.lower())).split()
 
 
 def test_letter_to_index_with_enumerate(setup) -> None:
@@ -40,13 +40,13 @@ def test_letter_to_index_with_enumerate(setup) -> None:
     start_time = process_time()
 
     letters: dict = {}
-    
+
     for word in words:
 
         indexes = []
 
         for letter in [*word]:
-            indexes.append(next(letter_to_index(letter), None))
+            indexes.append(next(letter_to_number(letter), None))
 
         letters.update({word: indexes})
 
@@ -56,6 +56,6 @@ def test_letter_to_index_with_enumerate(setup) -> None:
 
     print(f'CPU Execution time:{res} seconds')
     print(f'\n{letters}\n')
-    
+
     for k, v in letters.items():
         print(f'{k.rjust(16)}:{v}')
