@@ -1,12 +1,20 @@
+from re import sub
 from time import process_time
 from pytest import fixture
 from typing import Iterator
-
+from unicodedata import normalize
 
 def letter_to_index(letter: str) -> Iterator[int]:
     _alphabet = 'abcdefghijklmnopqrstuvwxyz'
     return (i for i, _letter in enumerate(_alphabet, 1) if _letter == letter)
 
+
+def normalize_text(text: str) -> str:
+    return normalize('NFD', text).encode('ASCII', 'ignore').decode('UTF-8')
+
+
+def get_only_alphabets(text: str) -> str:
+    return sub("[^A-Za-z\\s]", "", text)
 
 @fixture()
 def setup() -> list[str]:
@@ -16,7 +24,10 @@ def setup() -> list[str]:
             humano tentando desesperadamente explicar uma existência \
                 sem significado ou propósito."
 
-    words = phrase_matrix.lower().split()
+    print(phrase_matrix.lower())
+    print("------------------")
+
+    words = normalize_text(get_only_alphabets(phrase_matrix.lower())).split()
 
     return words
 
