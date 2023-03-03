@@ -104,23 +104,8 @@ def test_get_time_execution():
 
     phrase = "The NATO phonetic alphabet is a Spelling Alphabet \
         a set of words used instead of letters in oral communication \
-            over the phone or military radio The NATO phonetic alphabet is a Spelling Alphabet \
-        a set of words used instead of letters in oral communication \
-            over the phone or military radio The NATO phonetic alphabet is a Spelling Alphabet \
-        a set of words used instead of letters in oral communication \
-            over the phone or military radio The NATO phonetic alphabet is a Spelling Alphabet \
-        a set of words used instead of letters in oral communication \
-            over the phone or military radio The NATO phonetic alphabet is a Spelling Alphabet \
-        a set of words used instead of letters in oral communication \
-            over the phone or military radio The NATO phonetic alphabet is a Spelling Alphabet \
-        a set of words used instead of letters in oral communication \
-            over the phone or military radio The NATO phonetic alphabet is a Spelling Alphabet \
-        a set of words used instead of letters in oral communication \
-            over the phone or military radio The NATO phonetic alphabet is a Spelling Alphabet \
-        a set of words used instead of letters in oral communication \
-            over the phone or military radio The NATO phonetic alphabet is a Spelling Alphabet \
-        a set of words used instead of letters in oral communication \
             over the phone or military radio"
+
     print()
 
     start_time = datetime.now()
@@ -220,7 +205,12 @@ def test_get_time_execution():
         result = non_alphabet.get(letter)
         return result if result else sub("[^A-Za-z0-9]+", "", str(letter))
 
-    phrase = "Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein...Fórmula 1: Pérez é o mais rápido no 1º treino livre do GP do Bahrein..."
+    phrase = "Doctor: De vez em quando, uma vítima é poupada. Porque sorriu, porque tem sardas, porque implorou... \
+        E é assim que você vive consigo mesma. É assim que assassina milhões. Porque de vez em quando, por um capricho, se o vento soprar na direção certa, você decide ser piedosa. \
+        Blon: Só um assassino saberia disso. Não é verdade? Pelo que eu vi, sua feliz vida, deixa um rastro de devastação. \
+            E você sempre segue adiante porque não ousa olhar para trás. Brincando com a vida de tantos, \
+                você poderia ser um Deus. E tem razão, Doutor, você está coberto de razão: às vezes... \
+                    você deixa um escapar. Deixe-me escapar."
 
     words = []
 
@@ -240,7 +230,7 @@ def test_get_time_execution():
 
     for word in words:
         a, b = [*word]
-        print(f"{a.rjust(10)}:{b}")
+        print(f"{a.rjust(11)}:{b}")
 
     print(f'TIME-03: {(end_time - start_time)}')
     print(len(phrase))
