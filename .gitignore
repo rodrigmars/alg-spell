@@ -1,3 +1,5 @@
+*.alien
+
 venv-alg-spell/
 .vscode
 
